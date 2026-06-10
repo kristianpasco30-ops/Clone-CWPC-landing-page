@@ -78,6 +78,15 @@ const PROGRAMS = [
   { abbr: 'BSCRIM', name: 'BS in Criminology', desc: 'Pursue a career in law enforcement and criminal justice with comprehensive training.', icon: Scale, color: 'from-emerald-600 to-emerald-500' },
 ]
 
+/* ─── SHS Strands ─── */
+const SHS_STRANDS = [
+  { name: 'GAS', desc: 'General Academic Strand' },
+  { name: 'ABM', desc: 'Accountancy, Business, and Management' },
+  { name: 'Tech-Voc', desc: 'Technical-Vocational-Livelihood' },
+  { name: 'HUMSS', desc: 'Humanities and Social Sciences' },
+  { name: 'STEM', desc: 'Science, Technology, Engineering, and Mathematics' },
+]
+
 /* ─── Campus Data ─── */
 const CAMPUS = [
   { title: 'Classrooms', desc: 'Spacious, well-ventilated classrooms equipped with modern teaching aids.', img: '/campus-classrooms.png' },
@@ -101,6 +110,7 @@ const NAV_LINKS = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'programs', label: 'Programs' },
+  { id: 'shs', label: 'SHS' },
   { id: 'campus', label: 'Campus' },
   { id: 'why-cwpc', label: 'Why CWPC' },
   { id: 'enroll', label: 'Enroll' },
@@ -428,6 +438,45 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ─── Senior High School Section ─── */}
+      <Section id="shs" className="py-20 md:py-28 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
+              <GraduationCap className="w-4 h-4" /> Senior High School
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">
+              SHS Program <span className="gradient-text">Offerings</span>
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
+              We offer comprehensive Senior High School strands to prepare you for college and beyond.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+            {SHS_STRANDS.map((strand, i) => (
+              <div key={i} className="bg-emerald-50 dark:bg-gray-800 rounded-xl p-6 text-center border border-emerald-100 dark:border-gray-700 hover-card">
+                <div className="text-3xl font-extrabold text-emerald-700 dark:text-emerald-400 mb-2">{strand.name}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">{strand.desc}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-emerald-600 rounded-2xl p-8 md:p-12 text-white text-center shadow-xl shadow-emerald-500/20">
+            <h3 className="text-2xl font-bold mb-4">Why Enroll in our SHS?</h3>
+            <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
+              Enjoy <strong>Free Tuition</strong>. Plus, every enrollee receives a complete set of school uniform, P.E. uniform, and a school ID.
+            </p>
+            <button
+              onClick={() => scrollTo('enroll')}
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-emerald-700 font-bold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all"
+            >
+              Enroll in SHS Now <ChevronRight className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </Section>
