@@ -280,46 +280,37 @@ export default function Home() {
             priority
             className="object-cover"
           />
-          <div className="hero-overlay absolute inset-0 hero-pattern" />
+          {/* Slight dark overlay for contrast */}
+          <div className="absolute inset-0 bg-black/30" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center py-32">
-          <div className="animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-emerald-100 text-sm font-medium mb-8">
-              <Building2 className="w-4 h-4" />
-              Ternate, Cavite — Est. 2000
+          <div className="animate-fade-in-up glass-card rounded-3xl p-8 md:p-12 mb-10 max-w-4xl mx-auto border border-white/20 shadow-2xl shadow-black/30 bg-white/10 backdrop-blur-[2px]">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-4">
+              Cavite West Point
+            </h1>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-white mb-8">
+              College
+            </h2>
+            <p className="text-lg sm:text-xl text-white/90 max-w-xl mx-auto mb-10 leading-relaxed">
+              Dedicated to shaping the future leaders of tomorrow through holistic and quality education.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => scrollTo('programs')}
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#1a472a] text-white font-semibold rounded-lg hover:bg-[#143621] transition-all text-base"
+              >
+                Explore Programs
+              </button>
+              <button
+                onClick={() => scrollTo('about')}
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all text-base"
+              >
+                Learn More
+              </button>
             </div>
           </div>
-          <div className="animate-fade-in-up animation-delay-100 glass-card rounded-3xl p-8 md:p-12 mb-10 max-w-4xl mx-auto border-white/20 shadow-2xl shadow-black/20">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-              Cavite West Point
-              <span className="block gradient-text" style={{
-                WebkitTextFillColor: 'transparent',
-                background: 'linear-gradient(135deg, #6ee7b7, #34d399, #a7f3d0)',
-                WebkitBackgroundClip: 'text'
-              }}>
-                College
-              </span>
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-emerald-100/90 max-w-2xl mx-auto mb-0 leading-relaxed">
-              Shaping Future Leaders Through Quality Education. Your gateway to academic excellence and professional success.
-            </p>
-          </div>
-          <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => scrollTo('programs')}
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-emerald-700 font-bold rounded-xl shadow-xl shadow-black/10 hover:shadow-2xl hover:scale-105 transition-all text-base"
-            >
-              Explore Programs <ChevronRight className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => scrollTo('about')}
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white/10 backdrop-blur-sm border border-white/25 text-white font-bold rounded-xl hover:bg-white/20 transition-all text-base"
-            >
-              Learn More
-            </button>
-          </div>
 
-          {/* Stats Bar */}
+          {/* Stats Bar - Minimal black/grey cards */}
           <div className="animate-fade-in-up animation-delay-500 mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {[
               { num: '1,000+', label: 'Students' },
@@ -327,9 +318,9 @@ export default function Home() {
               { num: '8+', label: 'Programs' },
               { num: '25+', label: 'Years' },
             ].map((s, i) => (
-              <div key={i} className="glass-card rounded-xl p-4 text-center">
-                <div className="text-2xl md:text-3xl font-extrabold text-white">{s.num}</div>
-                <div className="text-sm text-emerald-200 mt-0.5">{s.label}</div>
+              <div key={i} className="bg-black/40 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10">
+                <div className="text-2xl md:text-3xl font-bold text-white">{s.num}</div>
+                <div className="text-xs text-white/70 uppercase tracking-wider mt-1">{s.label}</div>
               </div>
             ))}
           </div>
