@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef, type ReactNode } from 'react'
 import Image from 'next/image'
+import heroCampus from '../../public/hero-campus.jpg'
+import cwpcLogo from '../../public/cwpc-logo.png'
 import {
   Menu,
   X,
@@ -170,7 +172,7 @@ export default function Home() {
             <button onClick={() => scrollTo('home')} className="flex items-center gap-2.5 group">
               <div className="w-10 h-10 relative">
                 <Image
-                  src="/cwpc-logo.png"
+                  src={cwpcLogo.src}
                   alt="CWPC Logo"
                   fill
                   className="object-contain"
