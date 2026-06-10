@@ -168,8 +168,13 @@ export default function Home() {
           <div className="flex items-center justify-between h-16 md:h-18">
             {/* Logo */}
             <button onClick={() => scrollTo('home')} className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition-shadow">
-                <Shield className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 relative">
+                <Image
+                  src="/OLD LOGO ENHANCED.png"
+                  alt="CWPC Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <span className={`text-lg font-extrabold tracking-wide transition-colors ${isScrolled ? 'text-emerald-700 dark:text-emerald-400' : 'text-white'}`}>
