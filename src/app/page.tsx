@@ -284,7 +284,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/30" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center py-32">
-          <div className="animate-fade-in-up glass-card rounded-3xl p-8 md:p-12 mb-10 max-w-4xl mx-auto border border-white/20 shadow-2xl shadow-black/30 bg-white/5 backdrop-blur-[1px]">
+          <div className="animate-fade-in-up glass-card rounded-3xl p-8 md:p-12 mb-10 max-w-4xl mx-auto shadow-2xl shadow-black/30 bg-white/5 backdrop-blur-[1px]">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-4">
               Cavite West Point
             </h1>
