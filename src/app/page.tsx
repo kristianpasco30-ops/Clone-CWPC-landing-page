@@ -274,7 +274,7 @@ export default function Home() {
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/hero-campus.png"
+            src="/hero-campus.jpg"
             alt="CWPC Campus"
             fill
             priority
