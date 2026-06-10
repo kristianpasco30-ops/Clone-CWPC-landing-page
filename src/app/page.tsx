@@ -468,15 +468,26 @@ export default function Home() {
 
           <div className="bg-emerald-600 rounded-2xl p-8 md:p-12 text-white text-center shadow-xl shadow-emerald-500/20">
             <h3 className="text-2xl font-bold mb-4">Why Enroll in our SHS?</h3>
-            <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-emerald-100 text-lg mb-4 max-w-2xl mx-auto">
               Enjoy <strong>Free Tuition</strong>. Plus, every enrollee receives a complete set of school uniform, P.E. uniform, and a school ID.
             </p>
-            <button
-              onClick={() => scrollTo('enroll')}
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-emerald-700 font-bold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all"
-            >
-              Enroll in SHS Now <ChevronRight className="w-5 h-5" />
-            </button>
+            <div className="mt-8 text-left bg-white/10 p-6 rounded-xl max-w-xl mx-auto">
+              <h4 className="font-bold text-lg mb-3">Requirements:</h4>
+              <ul className="list-disc list-inside space-y-1.5 text-emerald-50">
+                <li>Birth certificate</li>
+                <li>Form 137</li>
+                <li>Good moral character</li>
+                <li>Learner Reference Number (LRN)</li>
+              </ul>
+            </div>
+            <div className="mt-8">
+              <button
+                onClick={() => scrollTo('enroll')}
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-emerald-700 font-bold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all"
+              >
+                Enroll in SHS Now <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
         </div>
       </Section>
