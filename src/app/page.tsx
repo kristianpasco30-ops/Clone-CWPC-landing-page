@@ -608,29 +608,37 @@ export default function Home() {
               <h3 className="font-bold text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-6 text-lg">
                 <Clock className="w-5 h-5" /> Important Reminders
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-amber-500" />
-                  <p className="text-amber-700 dark:text-amber-200 text-sm md:text-base leading-relaxed">
-                    Enrollment is done <strong>in person</strong> at the campus
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 bg-amber-100 dark:bg-amber-900/50 p-1.5 rounded-lg flex-shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                  </div>
+                  <p className="text-amber-900 dark:text-amber-100 text-sm md:text-base leading-relaxed">
+                    Enrollment is done <strong>in person</strong> at the campus.
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-amber-500" />
-                  <p className="text-amber-700 dark:text-amber-200 text-sm md:text-base leading-relaxed">
-                    Registration fee: <strong>₱1,000</strong> (non-refundable)
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 bg-amber-100 dark:bg-amber-900/50 p-1.5 rounded-lg flex-shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                  </div>
+                  <p className="text-amber-900 dark:text-amber-100 text-sm md:text-base leading-relaxed">
+                    Registration fee: <strong>₱1,000</strong> (non-refundable).
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-amber-500" />
-                  <p className="text-amber-700 dark:text-amber-200 text-sm md:text-base leading-relaxed">
-                    Office Hours: <strong>Mon to Fri, 8:00 AM – 5:00 PM</strong>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 bg-amber-100 dark:bg-amber-900/50 p-1.5 rounded-lg flex-shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                  </div>
+                  <p className="text-amber-900 dark:text-amber-100 text-sm md:text-base leading-relaxed">
+                    Office Hours: <strong>Mon to Fri, 8:00 AM – 5:00 PM</strong>.
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-amber-500" />
-                  <p className="text-amber-700 dark:text-amber-200 text-sm md:text-base leading-relaxed">
-                    Bring original documents for verification
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 bg-amber-100 dark:bg-amber-900/50 p-1.5 rounded-lg flex-shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                  </div>
+                  <p className="text-amber-900 dark:text-amber-100 text-sm md:text-base leading-relaxed">
+                    Bring original documents for verification.
                   </p>
                 </div>
               </div>
