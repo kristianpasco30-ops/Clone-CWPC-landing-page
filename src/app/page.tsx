@@ -109,7 +109,7 @@ const FEATURES = [
 const NAV_LINKS = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'programs', label: 'Programs' },
+  { id: 'programs', label: 'College Programs' },
   { id: 'shs', label: 'SHS' },
   { id: 'campus', label: 'Campus' },
   { id: 'why-cwpc', label: 'Why CWPC' },
@@ -391,7 +391,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* ─── Programs Section ─── */}
+      {/* ─── College Programs Section ─── */}
       <Section id="programs" className="py-20 md:py-28 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -399,7 +399,7 @@ export default function Home() {
               <GraduationCap className="w-4 h-4" /> Academic Programs
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">
-              Our <span className="gradient-text">Programs</span>
+              Our <span className="gradient-text">College Programs</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
               Choose from 8 comprehensive degree programs designed to prepare you for a successful career.
