@@ -278,10 +278,10 @@ export default function Home() {
             alt="CWPC Campus"
             fill
             priority
-            className="object-cover"
+            className="object-cover backdrop-blur-[2px]"
           />
           {/* Slight dark overlay for contrast */}
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center py-32">
           {/* Content floating without a container box */}
