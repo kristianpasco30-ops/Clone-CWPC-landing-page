@@ -274,7 +274,7 @@ export default function Home() {
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           {/* Background image container */}
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/hero-campus.jpg")' }}></div>
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroCampus.src})` }}></div>
           {/* Blur overlay */}
           <div className="absolute inset-0 backdrop-blur-[2px]"></div>
           {/* Dark overlay for contrast */}
