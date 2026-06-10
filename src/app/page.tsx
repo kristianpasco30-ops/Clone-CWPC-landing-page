@@ -273,14 +273,11 @@ export default function Home() {
       {/* ─── Hero Section ─── */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image
-            src="/hero-campus.jpg"
-            alt="CWPC Campus"
-            fill
-            priority
-            className="object-cover backdrop-blur-[2px]"
-          />
-          {/* Slight dark overlay for contrast */}
+          {/* Background image container */}
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/hero-campus.jpg")' }}></div>
+          {/* Blur overlay */}
+          <div className="absolute inset-0 backdrop-blur-[2px]"></div>
+          {/* Dark overlay for contrast */}
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center py-32">
