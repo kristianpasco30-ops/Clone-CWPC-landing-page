@@ -574,7 +574,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto mb-14">
             <div className="relative">
               {/* Vertical line */}
-              <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 timeline-line md:-translate-x-px" />
+              <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-0.5 timeline-line md:-translate-x-px" />
 
               {[
                 { step: 1, title: 'Visit the Campus', desc: 'Come to CWPC in Ternate, Cavite. Our staff will welcome you and answer your questions about our programs.', side: 'left' },
@@ -583,16 +583,16 @@ export default function Home() {
                 { step: 4, title: 'Pay Registration Fee', desc: 'Pay the ₱1,000 registration fee at the Cashier\'s Office to confirm your enrollment.', side: 'right' },
                 { step: 5, title: 'Enrollment Confirmed', desc: 'Receive your enrollment confirmation, class schedule, and student ID. Welcome to CWPC!', side: 'left' },
               ].map((item, i) => (
-                <div key={i} className={`relative flex items-start gap-6 mb-8 last:mb-0 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                <div key={i} className={`relative flex items-start gap-4 mb-8 last:mb-0 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   {/* Circle */}
-                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-10">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
-                      <span className="text-white font-extrabold text-lg">{item.step}</span>
+                  <div className="absolute left-5 md:left-1/2 -translate-x-1/2 z-10">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
+                      <span className="text-white font-extrabold text-base md:text-lg">{item.step}</span>
                     </div>
                   </div>
                   {/* Content */}
-                  <div className={`ml-20 md:ml-0 md:w-1/2 ${i % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
-                    <div className="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover-card">
+                  <div className={`ml-14 md:ml-0 md:w-1/2 ${i % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'}`}>
+                    <div className="bg-white dark:bg-gray-800 rounded-xl p-4 md:p-5 border border-gray-100 dark:border-gray-700 shadow-sm hover-card">
                       <h3 className="font-bold text-gray-900 dark:text-white mb-1">{item.title}</h3>
                       <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                     </div>
@@ -603,29 +603,37 @@ export default function Home() {
           </div>
 
           {/* Important Reminders */}
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-6">
-              <h3 className="font-bold text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-3">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-2xl p-5 md:p-8">
+              <h3 className="font-bold text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-6 text-lg">
                 <Clock className="w-5 h-5" /> Important Reminders
               </h3>
-              <ul className="space-y-2 text-amber-700 dark:text-amber-200 text-sm">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-500" />
-                  Enrollment is done <strong>in person</strong> at the campus
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-500" />
-                  Registration fee: <strong>₱1,000</strong> (non-refundable)
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-500" />
-                  Office Hours: <strong>Monday to Friday, 8:00 AM – 5:00 PM</strong>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-500" />
-                  Bring original documents for verification
-                </li>
-              </ul>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-amber-500" />
+                  <p className="text-amber-700 dark:text-amber-200 text-sm md:text-base leading-relaxed">
+                    Enrollment is done <strong>in person</strong> at the campus
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-amber-500" />
+                  <p className="text-amber-700 dark:text-amber-200 text-sm md:text-base leading-relaxed">
+                    Registration fee: <strong>₱1,000</strong> (non-refundable)
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-amber-500" />
+                  <p className="text-amber-700 dark:text-amber-200 text-sm md:text-base leading-relaxed">
+                    Office Hours: <strong>Mon to Fri, 8:00 AM – 5:00 PM</strong>
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0 text-amber-500" />
+                  <p className="text-amber-700 dark:text-amber-200 text-sm md:text-base leading-relaxed">
+                    Bring original documents for verification
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="mt-6 text-center">
               <a
