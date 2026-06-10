@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, type ReactNode } from 'react'
 import Image from 'next/image'
-import heroCampus from '../../public/hero-campus.jpg'
+import heroCampus from '../../public/hero-campus.png'
 import cwpcLogo from '../../public/cwpc-logo.png'
 import {
   Menu,
