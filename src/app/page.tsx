@@ -450,20 +450,22 @@ export default function Home() {
               <GraduationCap className="w-4 h-4" /> Senior High School
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">
-              SHS Program <span className="gradient-text">Offerings</span>
+              New SHS <span className="gradient-text">Curriculum</span>
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
-              We offer comprehensive Senior High School strands to prepare you for college and beyond.
+            <p className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto">
+              The Department of Education (DepEd) has fully rolled out the Strengthened Senior High School (SHS) Curriculum. Fixed strands (like STEM, ABM, and HUMSS) are removed. Instead, students choose from two main tracks—<strong>Academic</strong> and <strong>Technical-Professional (TechPro)</strong>—while selecting from flexible electives.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
-            {SHS_STRANDS.map((strand, i) => (
-              <div key={i} className="bg-emerald-50 dark:bg-gray-800 rounded-xl p-6 text-center border border-emerald-100 dark:border-gray-700 hover-card">
-                <div className="text-3xl font-extrabold text-emerald-700 dark:text-emerald-400 mb-2">{strand.name}</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">{strand.desc}</div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-emerald-50 dark:bg-gray-800 rounded-xl p-8 border border-emerald-100 dark:border-gray-700">
+              <h3 className="text-2xl font-bold text-emerald-800 dark:text-emerald-300 mb-4">Academic Track</h3>
+              <p className="text-gray-600 dark:text-gray-300">Focused on preparing students for college-level education through rigorous academic subjects and flexible electives.</p>
+            </div>
+            <div className="bg-emerald-50 dark:bg-gray-800 rounded-xl p-8 border border-emerald-100 dark:border-gray-700">
+              <h3 className="text-2xl font-bold text-emerald-800 dark:text-emerald-300 mb-4">Tech-Professional Track</h3>
+              <p className="text-gray-600 dark:text-gray-300">Designed to equip students with industry-ready skills for immediate employment, entrepreneurship, or further technical training.</p>
+            </div>
           </div>
 
           <div className="bg-emerald-600 rounded-2xl p-8 md:p-12 text-white text-center shadow-xl shadow-emerald-500/20">
