@@ -284,14 +284,14 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/30" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center py-32">
-          <div className="animate-fade-in-up glass-card rounded-3xl p-8 md:p-12 mb-10 max-w-4xl mx-auto border border-white/20 shadow-2xl shadow-black/30 bg-white/10 backdrop-blur-[2px]">
+          <div className="animate-fade-in-up glass-card rounded-3xl p-8 md:p-12 mb-10 max-w-4xl mx-auto border border-white/20 shadow-2xl shadow-black/30 bg-white/5 backdrop-blur-[1px]">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-4">
               Cavite West Point
             </h1>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-white mb-8">
               College
             </h2>
-            <p className="text-lg sm:text-xl text-white/90 max-w-xl mx-auto mb-10 leading-relaxed">
+            <p className="text-lg sm:text-xl text-white font-medium max-w-xl mx-auto mb-10 leading-relaxed [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]">
               Dedicated to shaping the future leaders of tomorrow through holistic and quality education.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
