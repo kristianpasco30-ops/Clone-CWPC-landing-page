@@ -103,10 +103,12 @@ const FEATURES = [
 const NAV_LINKS = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'programs', label: 'College Programs' },
+  { id: 'programs', label: 'Programs' },
   { id: 'shs', label: 'SHS' },
   { id: 'campus', label: 'Campus' },
-  { id: 'why-cwpc', label: 'Why CWPC' },
+  { id: 'why-cwpc', label: 'Why Us' },
+  { id: 'tuition', label: 'Tuition' },
+  { id: 'faqs', label: 'FAQs' },
   { id: 'enroll', label: 'Enroll' },
   { id: 'contact', label: 'Contact' },
 ]
