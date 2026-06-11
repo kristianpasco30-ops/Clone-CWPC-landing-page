@@ -514,14 +514,21 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {CAMPUS.map((item, i) => (
               <div key={i} className="group rounded-xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover-card">
-                <div className="relative h-56 sm:h-64 overflow-hidden">
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                <div className="relative h-56 sm:h-64 overflow-hidden bg-gray-100 dark:bg-gray-700 flex flex-col items-center justify-center">
+                  {item.img.startsWith('/') && !item.img.includes('campus-') ? (
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center text-gray-400">
+                      <ImageIcon className="w-12 h-12 mb-2" />
+                      <span className="text-sm font-medium">Image Coming Soon</span>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <h3 className="absolute bottom-4 left-4 text-xl font-bold text-white">{item.title}</h3>
                 </div>
