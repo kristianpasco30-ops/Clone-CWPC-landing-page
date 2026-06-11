@@ -126,14 +126,8 @@ export default function Home() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrollY, setScrollY] = useState(0)
   const [activeSection, setActiveSection] = useState('home')
-  const [submitted, setSubmitted] = useState(false)
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubmitted(true)
-  }
 
   useEffect(() => {
     // Delay setting mounted to avoid synchronous setState in effect
@@ -729,45 +723,6 @@ export default function Home() {
               title="CWPC Location"
               className="w-full h-[250px] md:h-[300px]"
             />
-          </div>
-
-          {/* Inquiry Form */}
-          <div className="mt-16 max-w-2xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-xl">
-            <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Send an Inquiry</h3>
-            {submitted ? (
-              <div className="p-4 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-lg text-center font-medium">
-                Thank you! We'll get back to you soon.
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name *</label>
-                  <input type="text" required className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Program of Interest</label>
-                  <select className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700">
-                    <option value="">Select a program</option>
-                    <option value="BSED">BSED</option>
-                    <option value="BEED">BEED</option>
-                    <option value="BSHM">BSHM</option>
-                    <option value="BSTM">BSTM</option>
-                    <option value="BSBA">BSBA</option>
-                    <option value="BSPA">BSPA</option>
-                    <option value="BSOA">BSOA</option>
-                    <option value="BSCRIM">BSCRIM</option>
-                    <option value="SHS">Senior High School</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
-                  <textarea rows={4} className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700" />
-                </div>
-                <button type="submit" className="w-full bg-[#4CAF50] text-white py-3 rounded-lg font-bold hover:bg-[#45a049] transition-colors">
-                  Send Inquiry
-                </button>
-              </form>
-            )}
           </div>
         </div>
       </Section>
