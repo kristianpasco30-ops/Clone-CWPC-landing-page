@@ -541,6 +541,7 @@ export default function Home() {
             <p className="text-emerald-100/90 text-lg max-w-2xl mx-auto">
               Here&apos;s what makes Cavite West Point College the right choice for your education.
             </p>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-full">
             {FEATURES.map((feat, i) => (
               <div key={i} className="glass-card rounded-xl p-6 hover:bg-white/15 transition-all group">
