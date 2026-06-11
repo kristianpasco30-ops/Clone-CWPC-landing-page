@@ -580,50 +580,58 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 items-stretch">
             {/* College Enrollment */}
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
-              <h3 className="text-2xl font-bold mb-6 text-emerald-700 dark:text-emerald-400">College Programs</h3>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Steps:</h4>
-              <ol className="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-300 mb-6">
-                <li>Visit the Campus</li>
-                <li>Prepare Requirements</li>
-                <li>Submit & Register</li>
-                <li>Pay Registration Fee (₱1,000)</li>
-                <li>Enrollment Confirmed</li>
-              </ol>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Requirements:</h4>
-              <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 mb-8">
-                <li>Original and photocopy of birth certificate</li>
-                <li>High school diploma</li>
-                <li>Transcript of records</li>
-                <li>2x2 photos</li>
-              </ul>
-              <button className="w-full bg-[#4CAF50] text-white py-3 rounded-lg font-bold hover:bg-[#45a049] transition-colors">
-                Enroll in College
-              </button>
+            <div className="flex flex-col h-full bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold mb-6 text-emerald-700 dark:text-emerald-400">College Programs</h3>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Steps:</h4>
+                <ol className="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                  <li>Visit the Campus</li>
+                  <li>Prepare Requirements</li>
+                  <li>Submit & Register</li>
+                  <li>Pay Registration Fee (₱1,000)</li>
+                  <li>Enrollment Confirmed</li>
+                </ol>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Requirements:</h4>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 mb-8">
+                  <li>Original and photocopy of birth certificate</li>
+                  <li>High school diploma</li>
+                  <li>Transcript of records</li>
+                  <li>2x2 photos</li>
+                </ul>
+              </div>
+              <div className="mt-auto pt-6">
+                <button className="w-full bg-[#4CAF50] text-white py-3 rounded-lg font-bold hover:bg-[#45a049] transition-colors">
+                  Enroll in College
+                </button>
+              </div>
             </div>
 
             {/* SHS Enrollment */}
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 relative">
+            <div className="flex flex-col h-full bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 relative">
               <div className="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Free Tuition</div>
-              <h3 className="text-2xl font-bold mb-6 text-emerald-700 dark:text-emerald-400">Senior High School</h3>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Steps:</h4>
-              <ol className="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-300 mb-6">
-                <li>Visit the Campus</li>
-                <li>Submit Requirements</li>
-                <li>Enrollment Confirmed — Free Tuition</li>
-              </ol>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Requirements:</h4>
-              <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 mb-8">
-                <li>Birth certificate</li>
-                <li>Form 137</li>
-                <li>Good moral character certificate</li>
-                <li>Learner Reference Number (LRN)</li>
-              </ul>
-              <button className="w-full bg-[#4CAF50] text-white py-3 rounded-lg font-bold hover:bg-[#45a049] transition-colors">
-                Enroll in SHS
-              </button>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold mb-6 text-emerald-700 dark:text-emerald-400">Senior High School</h3>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Steps:</h4>
+                <ol className="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-300 mb-6">
+                  <li>Visit the Campus</li>
+                  <li>Submit Requirements</li>
+                  <li>Enrollment Confirmed — Free Tuition</li>
+                </ol>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Requirements:</h4>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 mb-8">
+                  <li>Birth certificate</li>
+                  <li>Form 137</li>
+                  <li>Good moral character certificate</li>
+                  <li>Learner Reference Number (LRN)</li>
+                </ul>
+              </div>
+              <div className="mt-auto pt-6">
+                <button className="w-full bg-[#4CAF50] text-white py-3 rounded-lg font-bold hover:bg-[#45a049] transition-colors">
+                  Enroll in SHS
+                </button>
+              </div>
             </div>
           </div>
 
