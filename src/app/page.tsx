@@ -55,21 +55,6 @@ function useInView(threshold = 0.15) {
   return { ref, visible }
 }
 
-/* ─── Animated Section Wrapper ─── */
-function Section({ id, children, className = '', delay = 0 }: { id: string; children: ReactNode; className?: string; delay?: number }) {
-  const { ref, visible } = useInView()
-  return (
-    <section
-      id={id}
-      ref={ref}
-      className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} w-full max-w-full overflow-x-hidden ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      {children}
-    </section>
-  )
-}
-
 /* ─── Programs Data ─── */
 const PROGRAMS = [
   { abbr: 'BSED', name: 'Bachelor of Secondary Education', desc: 'Prepare to become an effective secondary school teacher with comprehensive pedagogical training and subject expertise.', icon: GraduationCap, color: 'from-emerald-600 to-emerald-500' },
@@ -345,7 +330,7 @@ export default function Home() {
       </section>
 
       {/* ─── About Section ─── */}
-      <Section id="about" className="py-20 md:py-28 bg-white dark:bg-gray-950">
+      <section id="about" className="py-20 md:py-28 bg-white dark:bg-gray-950">
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center w-full min-w-0">
             <div>
@@ -399,10 +384,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* ─── College Programs Section ─── */}
-      <Section id="programs" className="py-20 md:py-28 bg-gray-50 dark:bg-gray-900">
+      <section id="programs" className="py-20 md:py-28 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
@@ -444,10 +429,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* ─── Senior High School Section ─── */}
-      <Section id="shs" className="py-20 md:py-28 bg-white dark:bg-gray-950">
+      <section id="shs" className="py-20 md:py-28 bg-white dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
@@ -496,10 +481,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* ─── Campus Section ─── */}
-      <Section id="campus" className="py-20 md:py-28 bg-white dark:bg-gray-950">
+      <section id="campus" className="py-20 md:py-28 bg-white dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
@@ -540,10 +525,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* ─── Why CWPC Section ─── */}
-      <Section id="why-cwpc" className="py-20 md:py-28 bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 relative overflow-hidden">
+      <section id="why-cwpc" className="py-20 md:py-28 bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 relative overflow-hidden">
         <div className="absolute inset-0 hero-pattern opacity-30" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -568,10 +553,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* ─── Enrollment Section ─── */}
-      <Section id="enroll" className="py-20 md:py-28 bg-gray-50 dark:bg-gray-900">
+      <section id="enroll" className="py-20 md:py-28 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">
@@ -677,10 +662,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* ─── Contact Section ─── */}
-      <Section id="contact" className="py-20 md:py-28 bg-white dark:bg-gray-950">
+      <section id="contact" className="py-20 md:py-28 bg-white dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
@@ -731,7 +716,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* ─── Footer ─── */}
       <footer className="bg-gray-900 dark:bg-gray-950 border-t border-gray-800 text-center py-12">
