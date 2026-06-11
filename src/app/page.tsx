@@ -62,7 +62,7 @@ function Section({ id, children, className = '', delay = 0 }: { id: string; chil
     <section
       id={id}
       ref={ref}
-      className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} w-full max-w-full overflow-hidden ${className}`}
+      className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} w-full max-w-full overflow-x-hidden ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
@@ -159,7 +159,7 @@ export default function Home() {
   const isScrolled = scrollY > 50
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <div className="min-h-screen w-full">
       {/* ─── Top Navigation Bar ─── */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -556,8 +556,7 @@ export default function Home() {
             <p className="text-emerald-100/90 text-lg max-w-2xl mx-auto">
               Here&apos;s what makes Cavite West Point College the right choice for your education.
             </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-full">
             {FEATURES.map((feat, i) => (
               <div key={i} className="glass-card rounded-xl p-6 hover:bg-white/15 transition-all group">
                 <div className="w-12 h-12 rounded-lg bg-white/15 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
