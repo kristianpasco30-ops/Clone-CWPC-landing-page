@@ -35,6 +35,11 @@ import {
   Globe,
   BookOpenCheck,
   ImageIcon,
+  Calendar,
+  Wallet,
+  CreditCard,
+  Monitor,
+  HelpCircle,
 } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
