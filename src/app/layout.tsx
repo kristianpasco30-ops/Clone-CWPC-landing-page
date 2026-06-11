@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     "BSCRIM",
   ],
   authors: [{ name: "Cavite West Point College" }],
+  icons: {
+    icon: "/cwpc-logo.png",
+  },
   openGraph: {
     title: "Cavite West Point College — Shaping Future Leaders",
     description:
