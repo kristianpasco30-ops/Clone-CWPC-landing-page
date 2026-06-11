@@ -173,9 +173,10 @@ export default function Home() {
             <button onClick={() => scrollTo('home')} className="flex items-center gap-2.5 group">
               <div className="w-10 h-10 relative">
                 <Image
-                  src={cwpcLogo.src}
+                  src={cwpcLogo}
                   alt="CWPC Logo"
                   fill
+                  sizes="40px"
                   className="object-contain"
                 />
               </div>
