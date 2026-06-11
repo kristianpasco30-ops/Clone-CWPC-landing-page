@@ -371,9 +371,14 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/10 relative h-[400px] md:h-[480px] bg-emerald-100 dark:bg-gray-800 flex items-center justify-center">
-                <Building2 className="w-24 h-24 text-emerald-500" />
-              </div>
+              <div className="rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/10 relative h-[400px] md:h-[480px]">
+              <Image
+                src="/whole-campus.jpg"
+                alt="CWPC Campus"
+                fill
+                className="object-cover"
+              />
+            </div>
               <div className="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-4 flex items-center gap-3 animate-pulse-glow">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center">
                   <Award className="w-6 h-6 text-white" />
