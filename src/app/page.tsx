@@ -627,12 +627,17 @@ export default function Home() {
                   <li>Learner Reference Number (LRN)</li>
                 </ul>
               </div>
-              <div className="mt-auto pt-6">
-                <button className="w-full bg-[#4CAF50] text-white py-3 rounded-lg font-bold hover:bg-[#45a049] transition-colors">
-                  Enroll in SHS
-                </button>
-              </div>
             </div>
+          </div>
+
+          {/* Unified CTA */}
+          <div className="flex justify-center mt-12">
+            <a
+              href="#contact"
+              className="w-full sm:w-auto px-10 py-3 bg-[#4CAF50] hover:bg-[#45a049] text-white font-medium rounded-lg text-center transition-colors"
+            >
+              Get in Touch to Enroll
+            </a>
           </div>
 
           {/* Important Reminders */}
