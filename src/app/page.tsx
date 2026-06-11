@@ -560,6 +560,329 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="mt-10 flex justify-center">
+            <div className="inline-flex items-center gap-3 bg-white/15 border border-white/20 rounded-xl px-6 py-4">
+              <CheckCircle2 className="w-6 h-6 text-emerald-300" />
+              <span className="text-white font-semibold text-sm md:text-base">
+                CHED Recognized Institution — Commission on Higher Education, Philippines
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Academic Calendar Section ─── */}
+      <section id="academic-calendar" className="py-20 md:py-28 bg-white dark:bg-gray-950">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
+            <Calendar className="w-4 h-4" /> Academic Calendar
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            AY 2026–2027 <span className="gradient-text">Schedule</span>
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 text-lg mb-10">
+            Mark your calendar for the upcoming academic year.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+            {[
+              { label: 'Enrollment Opens', date: 'July 6, 2026', note: 'In person at the Registrar\'s Office' },
+              { label: 'First Day of Classes', date: 'To be announced', note: 'Check Facebook for updates' },
+              { label: 'Office Hours', date: 'Mon – Fri', note: '8:00 AM – 5:00 PM' },
+              { label: 'Enrollment Period', date: 'July 2026', note: 'SHS and College Programs' },
+            ].map((item, i) => (
+              <div key={i} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-5 border border-gray-100 dark:border-gray-700">
+                <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1">{item.label}</p>
+                <p className="text-xl font-bold text-gray-900 dark:text-white mb-1">{item.date}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{item.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Tuition Fees Section ─── */}
+      <section id="tuition" className="py-20 md:py-28 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
+            <Wallet className="w-4 h-4" /> Tuition & Fees
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            Transparent <span className="gradient-text">Pricing</span>
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 text-lg mb-10">
+            All college programs have the same fee structure per semester.
+          </p>
+
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-lg p-8 mb-8 text-left">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6">College Programs — Per Semester</h3>
+            <div className="space-y-4">
+              {[
+                { label: 'Registration Fee', amount: '₱1,000', note: 'Paid upon enrollment, non-refundable' },
+                { label: 'Tuition Fee', amount: '₱6,000', note: 'Per semester' },
+                { label: 'Miscellaneous Fee', amount: '₱3,000', note: 'Per semester' },
+              ].map((fee, i) => (
+                <div key={i} className="flex items-center justify-between py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
+                  <div>
+                    <p className="font-semibold text-gray-900 dark:text-white">{fee.label}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{fee.note}</p>
+                  </div>
+                  <span className="text-lg font-bold text-emerald-600 dark:text-emerald-400">{fee.amount}</span>
+                </div>
+              ))}
+              <div className="flex items-center justify-between pt-4">
+                <p className="font-extrabold text-gray-900 dark:text-white text-lg">Total per Semester</p>
+                <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">₱10,000</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+            {[
+              {
+                icon: CreditCard,
+                title: 'Installment Payment',
+                desc: 'No need to pay in full. Fees are paid in partial installments every examination period — making it manageable for every student.',
+              },
+              {
+                icon: Award,
+                title: 'Scholarship Available',
+                desc: 'Qualified students may apply for a scholarship. Visit the Registrar\'s Office for requirements and application details.',
+              },
+              {
+                icon: Monitor,
+                title: 'Free Computer Lab Access',
+                desc: 'All enrolled students have free access to the computer laboratory for academic use during school hours.',
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700">
+                <div className="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center mb-4">
+                  <item.icon className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                </div>
+                <h4 className="font-bold text-gray-900 dark:text-white mb-2">{item.title}</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5 text-left">
+            <p className="text-emerald-800 dark:text-emerald-300 font-semibold flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+              Senior High School students enjoy <strong>Free Tuition</strong> under the DepEd Free SHS Program. Additional fees may apply for uniforms and IDs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FAQs Section ─── */}
+      <section id="faqs" className="py-20 md:py-28 bg-white dark:bg-gray-950">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
+              <HelpCircle className="w-4 h-4" /> FAQs
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+              Frequently Asked <span className="gradient-text">Questions</span>
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'What are the payment terms?',
+                a: 'Tuition fees are paid in installments every examination period. You do not need to pay the full amount upfront — payments are spread out monthly throughout the semester.',
+              },
+              {
+                q: 'How much is the tuition fee?',
+                a: 'All college programs have the same fee structure: ₱1,000 registration fee, ₱6,000 tuition fee, and ₱3,000 miscellaneous fee — totaling ₱10,000 per semester. Senior High School is free under the DepEd Free SHS Program.',
+              },
+              {
+                q: 'Is there a scholarship available?',
+                a: 'Yes. Qualified students may apply for a scholarship. Visit the Registrar\'s Office on campus for requirements and application procedures.',
+              },
+              {
+                q: 'Can I use the computer laboratory?',
+                a: 'Yes. All enrolled students have free access to the computer laboratory for academic purposes during school hours.',
+              },
+              {
+                q: 'Is CWPC recognized by CHED?',
+                a: 'Yes. Cavite West Point College is a CHED-recognized institution. All college programs are fully accredited by the Commission on Higher Education.',
+              },
+              {
+                q: 'When does enrollment open?',
+                a: 'Enrollment for AY 2026–2027 opens on July 6, 2026. Enrollment is done in person at the Registrar\'s Office, Monday to Friday, 8:00 AM – 5:00 PM.',
+              },
+              {
+                q: 'Is enrollment done online or in person?',
+                a: 'Enrollment is done in person at the CWPC campus in Ternate, Cavite. There is currently no online enrollment.',
+              },
+            ].map((faq, i) => (
+              <details key={i} className="group bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 p-5 cursor-pointer">
+                <summary className="flex items-center justify-between font-semibold text-gray-900 dark:text-white list-none">
+                  {faq.q}
+                  <ChevronRight className="w-5 h-5 text-gray-400 group-open:rotate-90 transition-transform flex-shrink-0 ml-4" />
+                </summary>
+                <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Academic Calendar Section ─── */}
+      <section id="academic-calendar" className="py-20 md:py-28 bg-white dark:bg-gray-950">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
+            <Calendar className="w-4 h-4" /> Academic Calendar
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            AY 2026–2027 <span className="gradient-text">Schedule</span>
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 text-lg mb-10">
+            Mark your calendar for the upcoming academic year.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+            {[
+              { label: 'Enrollment Opens', date: 'July 6, 2026', note: 'In person at the Registrar\'s Office' },
+              { label: 'First Day of Classes', date: 'To be announced', note: 'Check Facebook for updates' },
+              { label: 'Office Hours', date: 'Mon – Fri', note: '8:00 AM – 5:00 PM' },
+              { label: 'Enrollment Period', date: 'July 2026', note: 'SHS and College Programs' },
+            ].map((item, i) => (
+              <div key={i} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-5 border border-gray-100 dark:border-gray-700">
+                <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1">{item.label}</p>
+                <p className="text-xl font-bold text-gray-900 dark:text-white mb-1">{item.date}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{item.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Tuition Fees Section ─── */}
+      <section id="tuition" className="py-20 md:py-28 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
+            <Wallet className="w-4 h-4" /> Tuition & Fees
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            Transparent <span className="gradient-text">Pricing</span>
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 text-lg mb-10">
+            All college programs have the same fee structure per semester.
+          </p>
+
+          {/* Fee Breakdown Card */}
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-lg p-8 mb-8 text-left">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6">College Programs — Per Semester</h3>
+            <div className="space-y-4">
+              {[
+                { label: 'Registration Fee', amount: '₱1,000', note: 'Paid upon enrollment, non-refundable' },
+                { label: 'Tuition Fee', amount: '₱6,000', note: 'Per semester' },
+                { label: 'Miscellaneous Fee', amount: '₱3,000', note: 'Per semester' },
+              ].map((fee, i) => (
+                <div key={i} className="flex items-center justify-between py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
+                  <div>
+                    <p className="font-semibold text-gray-900 dark:text-white">{fee.label}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{fee.note}</p>
+                  </div>
+                  <span className="text-lg font-bold text-emerald-600 dark:text-emerald-400">{fee.amount}</span>
+                </div>
+              ))}
+              <div className="flex items-center justify-between pt-4">
+                <p className="font-extrabold text-gray-900 dark:text-white text-lg">Total per Semester</p>
+                <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">₱10,000</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Payment Terms + Scholarship + Free Computer Lab */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+            {[
+              {
+                icon: CreditCard,
+                title: 'Installment Payment',
+                desc: 'No need to pay in full. Fees are paid in partial installments every examination period — making it manageable for every student.',
+              },
+              {
+                icon: Award,
+                title: 'Scholarship Available',
+                desc: 'Qualified students may apply for a scholarship. Visit the Registrar\'s Office for requirements and application details.',
+              },
+              {
+                icon: Monitor,
+                title: 'Free Computer Lab Access',
+                desc: 'All enrolled students have free access to the computer laboratory for academic use during school hours.',
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700">
+                <div className="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center mb-4">
+                  <item.icon className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                </div>
+                <h4 className="font-bold text-gray-900 dark:text-white mb-2">{item.title}</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* SHS Free Tuition Note */}
+          <div className="mt-6 bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5 text-left">
+            <p className="text-emerald-800 dark:text-emerald-300 font-semibold flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+              Senior High School students enjoy <strong>Free Tuition</strong> under the DepEd Free SHS Program. Additional fees may apply for uniforms and IDs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FAQs Section ─── */}
+      <section id="faqs" className="py-20 md:py-28 bg-white dark:bg-gray-950">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
+              <HelpCircle className="w-4 h-4" /> FAQs
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+              Frequently Asked <span className="gradient-text">Questions</span>
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'What are the payment terms?',
+                a: 'Tuition fees are paid in installments every examination period. You do not need to pay the full amount upfront — payments are spread out monthly throughout the semester.',
+              },
+              {
+                q: 'How much is the tuition fee?',
+                a: 'All college programs have the same fee structure: ₱1,000 registration fee, ₱6,000 tuition fee, and ₱3,000 miscellaneous fee — totaling ₱10,000 per semester. Senior High School is free under the DepEd Free SHS Program.',
+              },
+              {
+                q: 'Is there a scholarship available?',
+                a: 'Yes. Qualified students may apply for a scholarship. Visit the Registrar\'s Office on campus for requirements and application procedures.',
+              },
+              {
+                q: 'Can I use the computer laboratory?',
+                a: 'Yes. All enrolled students have free access to the computer laboratory for academic purposes during school hours.',
+              },
+              {
+                q: 'Is CWPC recognized by CHED?',
+                a: 'Yes. Cavite West Point College is a CHED-recognized institution. All college programs are fully accredited by the Commission on Higher Education.',
+              },
+              {
+                q: 'When does enrollment open?',
+                a: 'Enrollment for AY 2026–2027 opens on July 6, 2026. Enrollment is done in person at the Registrar\'s Office, Monday to Friday, 8:00 AM – 5:00 PM.',
+              },
+              {
+                q: 'Is enrollment done online or in person?',
+                a: 'Enrollment is done in person at the CWPC campus in Ternate, Cavite. There is currently no online enrollment.',
+              },
+            ].map((faq, i) => (
+              <details key={i} className="group bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 p-5 cursor-pointer">
+                <summary className="flex items-center justify-between font-semibold text-gray-900 dark:text-white list-none">
+                  {faq.q}
+                  <ChevronRight className="w-5 h-5 text-gray-400 group-open:rotate-90 transition-transform flex-shrink-0 ml-4" />
+                </summary>
+                <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{faq.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -625,49 +948,6 @@ export default function Home() {
             >
               Get in Touch to Enroll
             </a>
-          </div>
-
-          {/* Important Reminders */}
-          <div className="mt-12 max-w-4xl mx-auto">
-            <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-2xl p-5 md:p-8">
-              <h3 className="font-bold text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-6 text-lg">
-                <Clock className="w-5 h-5" /> Important Reminders (College Only)
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 bg-amber-100 dark:bg-amber-900/50 p-1.5 rounded-lg flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  </div>
-                  <p className="text-amber-900 dark:text-amber-100 text-sm md:text-base leading-relaxed">
-                    Enrollment is done <strong>in person</strong> at the campus.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 bg-amber-100 dark:bg-amber-900/50 p-1.5 rounded-lg flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  </div>
-                  <p className="text-amber-900 dark:text-amber-100 text-sm md:text-base leading-relaxed">
-                    Registration fee: <strong>₱1,000</strong> (non-refundable).
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 bg-amber-100 dark:bg-amber-900/50 p-1.5 rounded-lg flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  </div>
-                  <p className="text-amber-900 dark:text-amber-100 text-sm md:text-base leading-relaxed">
-                    Office Hours: <strong>Mon to Fri, 8:00 AM – 5:00 PM</strong>.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 bg-amber-100 dark:bg-amber-900/50 p-1.5 rounded-lg flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                  </div>
-                  <p className="text-amber-900 dark:text-amber-100 text-sm md:text-base leading-relaxed">
-                    Bring original documents for verification.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
