@@ -1,0 +1,51 @@
+# CWPC Landing Page - Change Log (June 11, 2026)
+
+## 1. UI & Layout Optimizations
+- **Hero Section:**
+    - Reduced headline font size for mobile (<= 768px).
+    - Adjusted stats grid to 2x2 layout on mobile.
+    - Set CTA buttons to full-width and stacked on mobile (<= 480px).
+- **Program Cards:** Updated to 2-column grid on mobile (<= 768px).
+- **Footer:** 
+    - Slimmed down to a single centered column.
+    - Replaced shield icon with CWPC logo.
+    - Centered branding and text.
+- **Maps:** Added mobile responsiveness (width: 100%, height: 250px on mobile).
+- **Enrollment Section:** 
+    - Merged SHS and College enrollment into a unified two-column layout.
+    - Aligned CTA buttons to the bottom of the cards using flexbox.
+    - Added a single "Get in Touch to Enroll" button below the grid.
+    - Updated "Important Reminders" header to specify "College Only".
+
+## 2. Asset & Image Stability Fixes
+- **Image placeholders:** Added logic to show a "Image Coming Soon" placeholder card for any missing campus images.
+- **Image Stability (Crucial):**
+    - Refactored `fill` images to use `next/image` with `sizes` props for optimized loading.
+    - Added explicit `aspect-video` container classes to About section image to prevent layout collapse.
+    - Switched Hero section image from CSS `backgroundImage` to a robust `next/image` component with `priority`.
+    - Implemented dynamic imports (`import ... from '...'`) for all static assets to ensure reliable path resolution during static builds.
+
+## 3. Bug Fixes
+- **TypeScript Import:** Added `ImageIcon` to the `lucide-react` import statement to resolve a build-time error.
+- **Horizontal Overflow:** Permanently resolved horizontal overflow (causing mobile zoom-out) by:
+    - Adding `overflow-x: hidden` and `max-width: 100vw` constraints in `globals.css`.
+    - Adding `w-full min-w-0 overflow-x-hidden` to key layout containers in `page.tsx`.
+    - Reducing grid gaps to prevent overflow.
+- **Build Fixes:** 
+    - Replaced invalid JSX `<Section>` tags with native HTML `<section>` tags.
+    - Added missing closing `</div>` in "Why CWPC" section to fix JSX structure.
+
+## 4. Contact Form
+- REVERTED: Inquiry form removed as per site review feedback.
+
+## 5. Content Updates
+- **Why CWPC:** Replaced generic copy with specific details:
+    - "CHED Recognized Programs"
+    - "Located in Ternate, Cavite" (emphasizing safety and peaceful environment).
+
+## 6. New Features (June 11, 2026)
+- **Accreditation Badge:** Added CHED Recognized Institution badge to Why CWPC section.
+- **Academic Calendar:** Added section detailing AY 2026-2027 important dates.
+- **Tuition & Fees:** Added detailed breakdown of fees and installment terms.
+- **FAQs:** Added accordion-style FAQ section.
+- **Navigation:** Updated to include new links (Tuition, FAQs) and shortened labels.
