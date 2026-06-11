@@ -377,7 +377,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/10 relative h-[400px] md:h-[480px]">
+              <div className="rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/10 relative h-[400px] md:h-[480px] aspect-video">
               <Image
                 src={wholeCampus.src}
                 alt="CWPC Campus"
