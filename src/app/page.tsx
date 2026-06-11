@@ -101,9 +101,9 @@ const CAMPUS = [
 
 /* ─── Why CWPC Features ─── */
 const FEATURES = [
-  { icon: Award, title: 'Quality Education', desc: 'Commission on Higher Education (CHED) recognized programs with competent faculty.' },
+  { icon: Award, title: 'CHED Recognized Programs', desc: 'Programs fully recognized by the Commission on Higher Education.' },
   { icon: Users, title: 'Supportive Community', desc: 'A close-knit academic family where every student matters and receives personal attention.' },
-  { icon: Shield, title: 'Safe Environment', desc: 'A secure and conducive learning environment in the peaceful town of Ternate, Cavite.' },
+  { icon: Shield, title: 'Located in Ternate, Cavite', desc: 'A secure and conducive learning environment in a peaceful town with a low-crime rate.' },
   { icon: Globe, title: 'Industry Connections', desc: 'Partnerships with local businesses and organizations for on-the-job training.' },
   { icon: BookOpenCheck, title: 'Affordable Tuition', desc: 'Quality education at accessible rates, making your dreams achievable.' },
   { icon: Star, title: 'Proven Track Record', desc: '25+ years of producing competent graduates who contribute to society.' },
@@ -727,7 +727,7 @@ export default function Home() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="CWPC Location"
-              className="w-full"
+              className="w-full h-[250px] md:h-[300px]"
             />
           </div>
 
@@ -773,74 +773,34 @@ export default function Home() {
       </Section>
 
       {/* ─── Footer ─── */}
-      <footer className="bg-gray-900 dark:bg-gray-950 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* Brand */}
-            <div>
-              <div className="flex items-center gap-2.5 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <div className="text-lg font-extrabold text-white">CWPC</div>
-                  <div className="text-[10px] text-gray-500 tracking-wider uppercase">Cavite West Point College</div>
-                </div>
+      <footer className="bg-gray-900 dark:bg-gray-950 border-t border-gray-800 text-center py-12">
+        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Brand */}
+          <div className="flex flex-col items-center gap-4 mb-8">
+            <div className="flex items-center gap-2.5">
+              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-white" />
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Shaping future leaders through quality education since 2000. Located in the peaceful town of Ternate, Cavite.
-              </p>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-white font-bold mb-4">Quick Links</h3>
-              <div className="space-y-2">
-                {NAV_LINKS.map(link => (
-                  <button
-                    key={link.id}
-                    onClick={() => scrollTo(link.id)}
-                    className="block text-gray-400 hover:text-emerald-400 text-sm transition-colors"
-                  >
-                    {link.label}
-                  </button>
-                ))}
+              <div>
+                <div className="text-lg font-extrabold text-white">CWPC</div>
+                <div className="text-[10px] text-gray-500 tracking-wider uppercase">Cavite West Point College</div>
               </div>
             </div>
-
-            {/* Contact Info */}
-            <div>
-              <h3 className="text-white font-bold mb-4">Contact Info</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-gray-400 text-sm">
-                  <Phone className="w-4 h-4 text-emerald-500" />
-                  (046) 412 1865
-                </div>
-                <div className="flex items-center gap-2 text-gray-400 text-sm">
-                  <Mail className="w-4 h-4 text-emerald-500" />
-                  cwpcternate@yahoo.com
-                </div>
-                <div className="flex items-center gap-2 text-gray-400 text-sm">
-                  <MapPin className="w-4 h-4 text-emerald-500" />
-                  Ternate, Cavite, Philippines
-                </div>
-                <div className="flex items-center gap-2 text-gray-400 text-sm">
-                  <Clock className="w-4 h-4 text-emerald-500" />
-                  Mon–Fri, 8:00 AM – 5:00 PM
-                </div>
-              </div>
-              <a
-                href="https://www.facebook.com/cwpccollegedepartment"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors"
-              >
-                <Facebook className="w-4 h-4" /> Follow us on Facebook
-              </a>
-            </div>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Shaping future leaders through quality education since 2000. Located in the peaceful town of Ternate, Cavite.
+            </p>
           </div>
 
-          <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <a
+            href="https://www.facebook.com/cwpccollegedepartment"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors mb-8"
+          >
+            <Facebook className="w-4 h-4" /> Follow us on Facebook
+          </a>
+
+          <div className="pt-8 border-t border-gray-800 flex flex-col items-center gap-4">
             <p className="text-gray-500 text-sm">
               © {new Date().getFullYear()} Cavite West Point College. All rights reserved.
             </p>
