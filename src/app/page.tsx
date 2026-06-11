@@ -346,8 +346,8 @@ export default function Home() {
 
       {/* ─── About Section ─── */}
       <Section id="about" className="py-20 md:py-28 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center w-full min-w-0">
             <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-semibold mb-4">
                 <Building2 className="w-4 h-4" /> About Us
