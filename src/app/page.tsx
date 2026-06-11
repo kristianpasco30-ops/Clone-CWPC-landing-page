@@ -62,7 +62,7 @@ function Section({ id, children, className = '', delay = 0 }: { id: string; chil
     <section
       id={id}
       ref={ref}
-      className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} ${className}`}
+      className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} w-full max-w-full overflow-hidden ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
@@ -159,7 +159,7 @@ export default function Home() {
   const isScrolled = scrollY > 50
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       {/* ─── Top Navigation Bar ─── */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -276,7 +276,7 @@ export default function Home() {
       </nav>
 
       {/* ─── Hero Section ─── */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src={heroCampus}
@@ -301,7 +301,7 @@ export default function Home() {
             <p className="text-base sm:text-xl text-white font-medium max-w-xl mx-auto mb-10 leading-relaxed drop-shadow-md">
               Dedicated to shaping the future leaders of tomorrow through holistic and quality education.
             </p>
-            <div className="flex flex-col gap-4 justify-center sm:flex-row">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center max-w-full">
               <button
                 onClick={() => scrollTo('programs')}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#1a472a] text-white font-semibold rounded-lg hover:bg-[#143621] transition-all text-base"
@@ -318,7 +318,7 @@ export default function Home() {
           </div>
 
           {/* Stats Bar - Minimal black/grey cards */}
-          <div className="animate-fade-in-up animation-delay-500 mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="animate-fade-in-up animation-delay-500 mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto w-full max-w-full">
             {[
               { num: '1,000+', label: 'Students' },
               { num: '30+', label: 'Faculty' },
@@ -415,7 +415,7 @@ export default function Home() {
               Choose from 8 comprehensive degree programs designed to prepare you for a successful career.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-full">
             {PROGRAMS.map((prog, i) => (
               <div
                 key={i}
@@ -461,7 +461,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 w-full max-w-full">
             <div className="bg-emerald-50 dark:bg-gray-800 rounded-xl p-8 border border-emerald-100 dark:border-gray-700">
               <h3 className="text-2xl font-bold text-emerald-800 dark:text-emerald-300 mb-4">Academic Track</h3>
               <p className="text-gray-600 dark:text-gray-300">Focused on preparing students for college-level education through rigorous academic subjects and flexible electives.</p>
@@ -718,17 +718,17 @@ export default function Home() {
           </div>
 
           {/* Map Embed */}
-          <div className="mt-12 max-w-4xl mx-auto rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-lg">
+          <div className="mt-12 max-w-4xl mx-auto rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-lg w-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.654321!2d120.7247!3d14.2804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd77!2zMTTCsDE2JzQ5LjQiTiAxMjDCsDQzJzM2LjgiRQ!5e0!3m2!1sen!2sph!4v1717824000000!5m2!1sen!2sph"
               width="100%"
-              height="300"
-              style={{ border: 0 }}
+              height="450"
+              style={{ border: 0, width: "100%", maxWidth: "100%", display: "block" }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="CWPC Location"
-              className="w-full h-[250px] md:h-[300px]"
+              className="w-full max-w-full block"
             />
           </div>
         </div>
