@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, type ReactNode } from 'react'
 import Image from 'next/image'
 import heroCampus from '../../public/hero-campus.png'
 import cwpcLogo from '../../public/cwpc-logo.png'
+import wholeCampus from '../../public/whole-campus.jpg'
 import {
   Menu,
   X,
@@ -275,10 +276,14 @@ export default function Home() {
       {/* ─── Hero Section ─── */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          {/* Background image container */}
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroCampus.src})` }}></div>
-          {/* Blur overlay */}
-          <div className="absolute inset-0 backdrop-blur-[2px]"></div>
+          <Image
+            src={heroCampus}
+            alt="CWPC Campus"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover backdrop-blur-[2px]"
+          />
           {/* Dark overlay for contrast */}
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -373,9 +378,10 @@ export default function Home() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/10 relative h-[400px] md:h-[480px]">
               <Image
-                src="/whole-campus.jpg"
+                src={wholeCampus.src}
                 alt="CWPC Campus"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -512,6 +518,7 @@ export default function Home() {
                     src={item.img}
                     alt={item.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
