@@ -644,7 +644,7 @@ export default function Home() {
           <div className="mt-12 max-w-4xl mx-auto">
             <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-2xl p-5 md:p-8">
               <h3 className="font-bold text-amber-800 dark:text-amber-300 flex items-center gap-2 mb-6 text-lg">
-                <Clock className="w-5 h-5" /> Important Reminders
+                <Clock className="w-5 h-5" /> Important Reminders (College Only)
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                 <div className="flex items-start gap-4">
