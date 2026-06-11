@@ -743,17 +743,16 @@ export default function Home() {
       <footer className="bg-gray-900 dark:bg-gray-950 border-t border-gray-800 text-center py-12">
         <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Brand */}
-          <div className="flex flex-col items-center gap-4 mb-8">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center">
-                <Shield className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <div className="text-lg font-extrabold text-white">CWPC</div>
-                <div className="text-[10px] text-gray-500 tracking-wider uppercase">Cavite West Point College</div>
-              </div>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+          <div className="flex flex-col items-center text-center mb-8">
+            <Image
+              src={cwpcLogo}
+              alt="CWPC Logo"
+              width={80}
+              height={80}
+              className="mb-3 w-16 h-16 md:w-20 md:h-20"
+            />
+            <h3 className="font-bold text-lg text-white">Cavite West Point College</h3>
+            <p className="text-sm text-gray-400 mt-2 max-w-xs">
               Shaping future leaders through quality education since 2000. Located in the peaceful town of Ternate, Cavite.
             </p>
           </div>
