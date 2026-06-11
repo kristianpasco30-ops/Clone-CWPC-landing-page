@@ -601,11 +601,6 @@ export default function Home() {
                   <li>2x2 photos</li>
                 </ul>
               </div>
-              <div className="mt-auto pt-6">
-                <button className="w-full bg-[#4CAF50] text-white py-3 rounded-lg font-bold hover:bg-[#45a049] transition-colors">
-                  Enroll in College
-                </button>
-              </div>
             </div>
 
             {/* SHS Enrollment */}
